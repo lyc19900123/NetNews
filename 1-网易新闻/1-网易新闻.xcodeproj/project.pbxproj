@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D59BC081E72C969008F6E30 /* LYCTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D59BC071E72C969008F6E30 /* LYCTitleLabel.m */; };
 		8D81F69B1E72BB840030C9D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F69A1E72BB840030C9D2 /* main.m */; };
 		8D81F69E1E72BB840030C9D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F69D1E72BB840030C9D2 /* AppDelegate.m */; };
 		8D81F6A41E72BB840030C9D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D81F6A21E72BB840030C9D2 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 /* Begin PBXFileReference section */
 		2B636A69D74657A68F778C90 /* Pods-1-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1-网易新闻/Pods-1-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 		777A76D4D83B6BF34C26B44C /* Pods-1-网易新闻.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1-网易新闻.release.xcconfig"; path = "Pods/Target Support Files/Pods-1-网易新闻/Pods-1-网易新闻.release.xcconfig"; sourceTree = "<group>"; };
+		8D59BC061E72C969008F6E30 /* LYCTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCTitleLabel.h; sourceTree = "<group>"; };
+		8D59BC071E72C969008F6E30 /* LYCTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCTitleLabel.m; sourceTree = "<group>"; };
 		8D81F6961E72BB840030C9D2 /* 1-网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1-网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D81F69A1E72BB840030C9D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D81F69C1E72BB840030C9D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 		8D81F6B31E72BE990030C9D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D59BC061E72C969008F6E30 /* LYCTitleLabel.h */,
+				8D59BC071E72C969008F6E30 /* LYCTitleLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				8D81F6BC1E72C2230030C9D2 /* LYCTitleModel.m in Sources */,
 				8D81F69E1E72BB840030C9D2 /* AppDelegate.m in Sources */,
 				8D81F6BF1E72C2A30030C9D2 /* LYCWebManager.m in Sources */,
+				8D59BC081E72C969008F6E30 /* LYCTitleLabel.m in Sources */,
 				8D81F69B1E72BB840030C9D2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
