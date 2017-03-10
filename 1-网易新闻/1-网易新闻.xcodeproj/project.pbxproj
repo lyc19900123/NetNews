@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D59BC081E72C969008F6E30 /* LYCTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D59BC071E72C969008F6E30 /* LYCTitleLabel.m */; };
 		8D59BC0B1E72D225008F6E30 /* LYCNewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D59BC0A1E72D225008F6E30 /* LYCNewsCollectionViewCell.m */; };
+		8D59BC0E1E72D5BE008F6E30 /* LYCNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D59BC0D1E72D5BE008F6E30 /* LYCNewsModel.m */; };
 		8D81F69B1E72BB840030C9D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F69A1E72BB840030C9D2 /* main.m */; };
 		8D81F69E1E72BB840030C9D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F69D1E72BB840030C9D2 /* AppDelegate.m */; };
 		8D81F6A41E72BB840030C9D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D81F6A21E72BB840030C9D2 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 		8D59BC071E72C969008F6E30 /* LYCTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCTitleLabel.m; sourceTree = "<group>"; };
 		8D59BC091E72D225008F6E30 /* LYCNewsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCNewsCollectionViewCell.h; sourceTree = "<group>"; };
 		8D59BC0A1E72D225008F6E30 /* LYCNewsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCNewsCollectionViewCell.m; sourceTree = "<group>"; };
+		8D59BC0C1E72D5BE008F6E30 /* LYCNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCNewsModel.h; sourceTree = "<group>"; };
+		8D59BC0D1E72D5BE008F6E30 /* LYCNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCNewsModel.m; sourceTree = "<group>"; };
 		8D81F6961E72BB840030C9D2 /* 1-网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1-网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D81F69A1E72BB840030C9D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D81F69C1E72BB840030C9D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				8D81F6BA1E72C2230030C9D2 /* LYCTitleModel.h */,
 				8D81F6BB1E72C2230030C9D2 /* LYCTitleModel.m */,
+				8D59BC0C1E72D5BE008F6E30 /* LYCNewsModel.h */,
+				8D59BC0D1E72D5BE008F6E30 /* LYCNewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				8D59BC081E72C969008F6E30 /* LYCTitleLabel.m in Sources */,
 				8D59BC0B1E72D225008F6E30 /* LYCNewsCollectionViewCell.m in Sources */,
 				8D81F69B1E72BB840030C9D2 /* main.m in Sources */,
+				8D59BC0E1E72D5BE008F6E30 /* LYCNewsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
