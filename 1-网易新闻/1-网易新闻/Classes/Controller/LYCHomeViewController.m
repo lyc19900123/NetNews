@@ -12,6 +12,7 @@
 #import "LYCWebManager.h"
 #import "LYCNewsCollectionViewCell.h"
 
+
 @interface LYCHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
     @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
     @property (weak, nonatomic) IBOutlet UICollectionView *newsCollectionView;
@@ -93,8 +94,12 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LYCNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
-    
-    
+    LYCTitleModel *model = self.titleModelArray[indexPath.item];
+    //  获取频道id
+    NSString *tid = model.tid;
+    //  计算请求的urlStr
+    NSString *urlStr = [NSString stringWithFormat:@"%@/0-20.html", tid];
+    cell.urlstr = urlStr;
     
     return cell;
 

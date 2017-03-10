@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LYCNewsCollectionViewCell : UICollectionViewCell
+@property (nonatomic, copy) NSString *urlstr;
 
 @end

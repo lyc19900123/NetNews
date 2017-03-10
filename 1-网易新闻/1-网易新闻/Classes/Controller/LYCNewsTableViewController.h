@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LYCNewsTableViewController : UITableViewController
+@property (nonatomic, copy) NSString *urlStr;
 
 @end

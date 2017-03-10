@@ -8,6 +8,7 @@
 
 #import "LYCNewsModel.h"
 #import "LYCWebManager.h"
+#import <YYModel.h>
 
 @implementation LYCNewsModel
 
@@ -15,8 +16,13 @@
 + (void)requestNewsModelArrayWithUrlStr: (NSString *)urlStr andCompletionBlock: (void (^)(NSArray *modelArray))completionBlock{
     LYCWebManager *manager = [LYCWebManager sharedWebManager];
     [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
+        NSDictionary *dict = responseObject;
+        NSString *key = [dict allKeys].firstObject;
+        NSArray *dictArray = [dict objectForKey:key];
         
+        NSArray *newsModelArray = [NSArray yy_modelArrayWithClass:[LYCNewsModel class] json:dictArray];
+        completionBlock(newsModelArray);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error: %@",error);
     }];
