@@ -13,6 +13,9 @@
 		8D81F6A61E72BB840030C9D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D81F6A51E72BB840030C9D2 /* Assets.xcassets */; };
 		8D81F6A91E72BB840030C9D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D81F6A71E72BB840030C9D2 /* LaunchScreen.storyboard */; };
 		8D81F6B71E72BEE20030C9D2 /* LYCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F6B61E72BEE20030C9D2 /* LYCHomeViewController.m */; };
+		8D81F6B91E72C1FD0030C9D2 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D81F6B81E72C1FD0030C9D2 /* topic_news.json */; };
+		8D81F6BC1E72C2230030C9D2 /* LYCTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F6BB1E72C2230030C9D2 /* LYCTitleModel.m */; };
+		8D81F6BF1E72C2A30030C9D2 /* LYCWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D81F6BE1E72C2A30030C9D2 /* LYCWebManager.m */; };
 		FC764595B42B5F5C44CCC10E /* libPods-1-网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EA4ABEEC640E0D97E81819 /* libPods-1-网易新闻.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,11 @@
 		8D81F6AA1E72BB840030C9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D81F6B51E72BEE20030C9D2 /* LYCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCHomeViewController.h; sourceTree = "<group>"; };
 		8D81F6B61E72BEE20030C9D2 /* LYCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCHomeViewController.m; sourceTree = "<group>"; };
+		8D81F6B81E72C1FD0030C9D2 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		8D81F6BA1E72C2230030C9D2 /* LYCTitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCTitleModel.h; sourceTree = "<group>"; };
+		8D81F6BB1E72C2230030C9D2 /* LYCTitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCTitleModel.m; sourceTree = "<group>"; };
+		8D81F6BD1E72C2A30030C9D2 /* LYCWebManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCWebManager.h; sourceTree = "<group>"; };
+		8D81F6BE1E72C2A30030C9D2 /* LYCWebManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCWebManager.m; sourceTree = "<group>"; };
 		B7EA4ABEEC640E0D97E81819 /* libPods-1-网易新闻.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-1-网易新闻.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +98,7 @@
 				8D81F6A51E72BB840030C9D2 /* Assets.xcassets */,
 				8D81F6A71E72BB840030C9D2 /* LaunchScreen.storyboard */,
 				8D81F6AA1E72BB840030C9D2 /* Info.plist */,
+				8D81F6B81E72C1FD0030C9D2 /* topic_news.json */,
 				8D81F6991E72BB840030C9D2 /* Supporting Files */,
 			);
 			path = "1-网易新闻";
@@ -125,6 +134,8 @@
 		8D81F6B21E72BE990030C9D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8D81F6BA1E72C2230030C9D2 /* LYCTitleModel.h */,
+				8D81F6BB1E72C2230030C9D2 /* LYCTitleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +150,8 @@
 		8D81F6B41E72BE9F0030C9D2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8D81F6BD1E72C2A30030C9D2 /* LYCWebManager.h */,
+				8D81F6BE1E72C2A30030C9D2 /* LYCWebManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 			files = (
 				8D81F6A91E72BB840030C9D2 /* LaunchScreen.storyboard in Resources */,
 				8D81F6A61E72BB840030C9D2 /* Assets.xcassets in Resources */,
+				8D81F6B91E72C1FD0030C9D2 /* topic_news.json in Resources */,
 				8D81F6A41E72BB840030C9D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D81F6B71E72BEE20030C9D2 /* LYCHomeViewController.m in Sources */,
+				8D81F6BC1E72C2230030C9D2 /* LYCTitleModel.m in Sources */,
 				8D81F69E1E72BB840030C9D2 /* AppDelegate.m in Sources */,
+				8D81F6BF1E72C2A30030C9D2 /* LYCWebManager.m in Sources */,
 				8D81F69B1E72BB840030C9D2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

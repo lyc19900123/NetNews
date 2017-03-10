@@ -7,8 +7,11 @@
 //
 
 #import "LYCHomeViewController.h"
+#import "LYCTitleModel.h"
 
 @interface LYCHomeViewController ()
+    @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
+    @property (weak, nonatomic) IBOutlet UICollectionView *newsCollectionView;
 
 @end
 
@@ -16,22 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 获取本地json数据（标题数据）
+    NSArray *array = [self loadTitleData];
+    
 }
+    
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSArray *)loadTitleData{
+    return [LYCTitleModel getTitleModel];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

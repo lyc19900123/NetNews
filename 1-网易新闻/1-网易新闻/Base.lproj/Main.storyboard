@@ -77,6 +77,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="网易新闻" id="1NX-rV-zpl"/>
+                    <connections>
+                        <outlet property="newsCollectionView" destination="9yJ-MT-jwX" id="96f-ne-ibT"/>
+                        <outlet property="titleScrollView" destination="yLe-ye-7Ku" id="PAZ-Os-rTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DW-z2-yDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
