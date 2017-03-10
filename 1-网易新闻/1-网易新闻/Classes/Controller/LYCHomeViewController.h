@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LYCHomeViewController.h
 //  1-网易新闻
 //
 //  Created by 梁永超 on 17/3/10.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LYCHomeViewController : UIViewController
 
 @end
-
