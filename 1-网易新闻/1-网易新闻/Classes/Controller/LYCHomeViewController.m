@@ -9,8 +9,10 @@
 #import "LYCHomeViewController.h"
 #import "LYCTitleModel.h"
 #import "LYCTitleLabel.h"
+#import "LYCWebManager.h"
+#import "LYCNewsCollectionViewCell.h"
 
-@interface LYCHomeViewController ()
+@interface LYCHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
     @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
     @property (weak, nonatomic) IBOutlet UICollectionView *newsCollectionView;
 
@@ -27,7 +29,17 @@
     // 获取本地json数据（标题数据）
     [self loadTitleData];
     
+    // 设置新闻视图
+    [self setupNewsCollectionView];
     
+    
+}
+
+// 设置新闻视图
+- (void)setupNewsCollectionView{
+    // 设置新闻视图的数据源和代理
+    self.newsCollectionView.dataSource = self;
+    self.newsCollectionView.delegate = self;
 }
 
 // 获取本地Json数据
@@ -54,7 +66,41 @@
     self.titleScrollView.bounces = NO;
     // 设置分页滚动
     self.titleScrollView.pagingEnabled = YES;
-    
 }
 
+#pragma mark 数据源代理方法
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.titleModelArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    LYCNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0];
+    
+    return cell;
+
+}
+
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
