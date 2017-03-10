@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
 
-@interface LYCWebManager : NSObject
+typedef enum : NSUInteger {
+    LYCRequestTypeGet,
+    LYCRequestTypePost,
+} LYCRequestType;
 
+@interface LYCWebManager : AFHTTPSessionManager
 
++ (instancetype)sharedWebManager;
+
+- (void)requestWithURL:(NSString *)urlStr WithRequestType:(LYCRequestType)requestType andParams: (id)parameters andSuccess: (void (^)(id responseObject))successBlock andFailture: (void (^)(NSError *error))failureBlock;
     
 @end
