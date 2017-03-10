@@ -30,9 +30,6 @@
     
 }
 
-// 设置标签label
-
-
 // 获取本地Json数据
 - (void)loadTitleData{
     self.titleModelArray = [LYCTitleModel getTitleModel];
@@ -42,7 +39,8 @@
     CGFloat labelHeight = 44;
     for (int i = 0; i < self.titleModelArray.count; i++) {
         LYCTitleLabel *titleLabel = [[LYCTitleLabel alloc] initWithFrame:CGRectMake(i * labelWidth, 0, labelWidth, labelHeight)];
-        titleLabel.text = @"标题";
+        LYCTitleModel *titleModel = self.titleModelArray[i];
+        titleLabel.text = titleModel.tname;
         titleLabel.textAlignment = NSTextAlignmentCenter;
         
         [self.titleScrollView addSubview:titleLabel];
