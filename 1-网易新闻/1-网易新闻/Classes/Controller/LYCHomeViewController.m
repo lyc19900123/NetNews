@@ -20,12 +20,18 @@
 
 @property (nonatomic, strong) NSArray *titleModelArray;
 
+//  记录频道标签的数组
+@property (nonatomic, strong) NSMutableArray *channelLabelArray;
+
 @end
 
 @implementation LYCHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 初始化channelLabelArray
+    self.channelLabelArray = [NSMutableArray array];
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     // 获取本地json数据（标题数据）
@@ -82,6 +88,13 @@
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClickAction:)];
         [titleLabel addGestureRecognizer:tapGesture];
         
+        //  记录频道label
+        [self.channelLabelArray addObject:titleLabel];
+        if (i == 0) {// 代表第一个标签
+            // 让其变大变红
+            titleLabel.changePrecent = 1;
+        }
+        
     }
     self.titleScrollView.contentSize = CGSizeMake(self.titleModelArray.count * labelWidth, 0);
     
@@ -110,7 +123,15 @@
     }
     [self.titleScrollView setContentOffset:CGPointMake(contentOffsetX, 0) animated:YES];
     
-    titleLabel.changePrecent = 1;
+    
+    for (LYCTitleLabel *label in self.channelLabelArray) {
+        if (titleLabel == label) {
+            label.changePrecent = 1;
+        }else{
+            label.changePrecent = 0;
+        }
+    }
+    
     
 }
 

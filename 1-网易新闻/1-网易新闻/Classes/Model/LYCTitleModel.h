@@ -14,6 +14,7 @@
 //  频道名称
 @property (nonatomic, copy) NSString *tname;
 
+
 + (NSArray *)getTitleModel;
 
 
