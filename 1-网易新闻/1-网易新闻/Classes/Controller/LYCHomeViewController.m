@@ -75,6 +75,13 @@
         titleLabel.textAlignment = NSTextAlignmentCenter;
         
         [self.titleScrollView addSubview:titleLabel];
+        
+        // 开启label的用户交互
+        titleLabel.userInteractionEnabled = YES;
+        // 添加tap手势
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClickAction:)];
+        [titleLabel addGestureRecognizer:tapGesture];
+        
     }
     self.titleScrollView.contentSize = CGSizeMake(self.titleModelArray.count * labelWidth, 0);
     
@@ -84,7 +91,26 @@
     // 取消弹簧效果
     self.titleScrollView.bounces = NO;
     // 设置分页滚动
-    self.titleScrollView.pagingEnabled = YES;
+//    self.titleScrollView.pagingEnabled = YES;
+}
+
+// 点击title方法
+- (void)tapClickAction:(UITapGestureRecognizer *)tap{
+    LYCTitleLabel *titleLabel = (LYCTitleLabel *)tap.view;
+    // 计算titleLabel滚动中心需要的偏移量
+    CGFloat contentOffsetX = titleLabel.center.x - self.view.bounds.size.width * 0.5;
+    // 最小偏移量
+    CGFloat minContentOffsetX = 0;
+    // 最大偏移量
+    CGFloat maxContentOffsetX = self.titleScrollView.contentSize.width - self.view.bounds.size.width;
+    if (contentOffsetX > maxContentOffsetX) {
+        contentOffsetX = maxContentOffsetX;
+    }else if (contentOffsetX < minContentOffsetX){
+        contentOffsetX = minContentOffsetX;
+    }
+    [self.titleScrollView setContentOffset:CGPointMake(contentOffsetX, 0) animated:YES];
+    
+    
 }
 
 #pragma mark 数据源代理方法
