@@ -110,6 +110,17 @@
 // 点击title方法
 - (void)tapClickAction:(UITapGestureRecognizer *)tap{
     LYCTitleLabel *titleLabel = (LYCTitleLabel *)tap.view;
+    [self scrolleTitleLabelScrollViewWithTitleLabel:titleLabel];
+        // 获取当前点击的label在数组中的下标
+    NSInteger index = [self.channelLabelArray indexOfObject:titleLabel];
+    // 计算出点击label应该显示的item的下标
+    NSIndexPath *showItemIndexPath = [NSIndexPath indexPathForItem:index inSection:0];
+    
+    [self.newsCollectionView scrollToItemAtIndexPath:showItemIndexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    
+}
+
+- (void)scrolleTitleLabelScrollViewWithTitleLabel:(LYCTitleLabel *)titleLabel{
     // 计算titleLabel滚动中心需要的偏移量
     CGFloat contentOffsetX = titleLabel.center.x - self.view.bounds.size.width * 0.5;
     // 最小偏移量
@@ -123,7 +134,6 @@
     }
     [self.titleScrollView setContentOffset:CGPointMake(contentOffsetX, 0) animated:YES];
     
-    
     for (LYCTitleLabel *label in self.channelLabelArray) {
         if (titleLabel == label) {
             label.changePrecent = 1;
@@ -131,13 +141,14 @@
             label.changePrecent = 0;
         }
     }
-    // 获取当前点击的label在数组中的下标
-    NSInteger index = [self.channelLabelArray indexOfObject:titleLabel];
-    // 计算出点击label应该显示的item的下标
-    NSIndexPath *showItemIndexPath = [NSIndexPath indexPathForItem:index inSection:0];
-    
-    [self.newsCollectionView scrollToItemAtIndexPath:showItemIndexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-    
+
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    //  计算滚动页数的索引
+    NSInteger index = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    LYCTitleLabel *label = self.channelLabelArray[index];
+    [self scrolleTitleLabelScrollViewWithTitleLabel:label];
 }
 
 #pragma mark 数据源代理方法
