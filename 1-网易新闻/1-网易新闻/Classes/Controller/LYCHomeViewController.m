@@ -110,6 +110,7 @@
     }
     [self.titleScrollView setContentOffset:CGPointMake(contentOffsetX, 0) animated:YES];
     
+    titleLabel.changePrecent = 1;
     
 }
 

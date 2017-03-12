@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LYCTitleLabel : UILabel
+// 变色变大比例
+@property (nonatomic, assign) CGFloat changePrecent;
 
 @end

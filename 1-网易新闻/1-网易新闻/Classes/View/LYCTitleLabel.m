@@ -10,6 +10,11 @@
 
 @implementation LYCTitleLabel
 
-
+- (void)setChangePrecent:(CGFloat)changePrecent{
+    _changePrecent = changePrecent;
+    
+    self.textColor = [UIColor colorWithRed:changePrecent green:0 blue:0 alpha:1.0];
+    self.transform = CGAffineTransformMakeScale(1 + changePrecent * 0.3, 1 + changePrecent * 0.3);
+}
 
 @end
