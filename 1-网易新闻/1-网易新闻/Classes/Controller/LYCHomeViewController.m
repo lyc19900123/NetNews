@@ -131,7 +131,12 @@
             label.changePrecent = 0;
         }
     }
+    // 获取当前点击的label在数组中的下标
+    NSInteger index = [self.channelLabelArray indexOfObject:titleLabel];
+    // 计算出点击label应该显示的item的下标
+    NSIndexPath *showItemIndexPath = [NSIndexPath indexPathForItem:index inSection:0];
     
+    [self.newsCollectionView scrollToItemAtIndexPath:showItemIndexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     
 }
 
