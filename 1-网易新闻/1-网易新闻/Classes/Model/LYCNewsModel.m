@@ -9,8 +9,13 @@
 #import "LYCNewsModel.h"
 #import "LYCWebManager.h"
 #import <YYModel.h>
+#import "LYCPictureModel.h"
 
 @implementation LYCNewsModel
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"imgextra" : [LYCPictureModel class]};
+}
 
 //  根据指定请求地址获取新闻数据
 + (void)requestNewsModelArrayWithUrlStr: (NSString *)urlStr andCompletionBlock: (void (^)(NSArray *modelArray))completionBlock{
